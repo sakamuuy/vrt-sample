@@ -26,5 +26,26 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: report.html
-          path: /vrt-report/report.html
+          path: report.html
+          retention-days: 5
+
+      - name: upload actual
+        uses: actions/upload-artifact@v2
+        with:
+          name: __actual__
+          path: __actual__
+          retention-days: 5
+
+      - name: upload screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: __screenshots__
+          path: __screenshots__
+          retention-days: 5
+
+      - name: upload diff
+        uses: actions/upload-artifact@v2
+        with:
+          name: __diff__
+          path: __diff__
           retention-days: 5

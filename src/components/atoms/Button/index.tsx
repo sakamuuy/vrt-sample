@@ -10,7 +10,7 @@ export function Button ({ children }: Props) {
       style={{
         background: 'rgb(236,87,133)',
         color: 'white',
-        padding: '8px 16px',
+        padding: '24px 16px',
         borderRadius: '8px',
         appearance: 'none',
         border: 'none'

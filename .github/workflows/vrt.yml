@@ -19,3 +19,10 @@ jobs:
 
       - name: VRT
         run: yarn vrt
+
+      - name: upload report.html
+        uses: actions/upload-artifact@v2
+        with:
+          name: report.html
+          path: /vrt-report/report.html
+          retention-days: 5

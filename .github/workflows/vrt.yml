@@ -18,7 +18,9 @@ jobs:
         run: yarn snapshot
 
       - name: VRT
+        id: step-vrt
         run: yarn vrt
+        continue-on-error: true
 
       - name: upload report.html
         uses: actions/upload-artifact@v2

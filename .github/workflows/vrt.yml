@@ -18,7 +18,7 @@ jobs:
         run: yarn snapshot
 
       - name: VRT
-        id: step-vrt
+        id: vrt
         run: yarn vrt
         continue-on-error: true
 
@@ -32,3 +32,6 @@ jobs:
             __screenshots__
             __diff__
           retention-days: 5
+
+      - if: ${{ steps.vrt.outcome != 'success' }}
+        run: exit 1

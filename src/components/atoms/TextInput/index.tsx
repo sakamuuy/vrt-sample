@@ -1,7 +1,3 @@
-type Props = {
-  
-}
-
 export function TextInput({}) {
   return (
     <input 
@@ -10,7 +6,8 @@ export function TextInput({}) {
         background: '#fff',
         borderRadius: '8px',
         padding: '8px',
-        outline: 'none'
+        outline: 'none',
+        border: 'none'
       }}/>
   )
 }

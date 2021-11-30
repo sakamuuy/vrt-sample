@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-type Props = {
+export type Props = {
   children: ReactNode
 }
 
@@ -11,7 +11,9 @@ export function Button ({ children }: Props) {
         background: 'rgb(236,87,133)',
         color: 'white',
         padding: '8px 16px',
-        borderRadius: '8px'
+        borderRadius: '8px',
+        appearance: 'none',
+        border: 'none'
       }}>
       {children}
     </button>

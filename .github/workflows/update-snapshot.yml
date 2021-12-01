@@ -9,10 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          git config --global user.email "sakamuu.y@gmail.com" 
-          git config --global user.name "sakamuuy"
-          git switch ${{ github.head_ref }}
+        with:
+          ref: ${{github.event.pull_request.head.ref}}
 
       - uses: actions/setup-node@v2
         with:
@@ -30,6 +28,8 @@ jobs:
         run: yarn update-snapshot
 
       - run: |
+          git config --global user.email "sakamuu.y@gmail.com" 
+          git config --global user.name "sakamuuy"
           git add .
           git commit -m 'update snapshot'
-          git push origin ${{ github.head_ref }}
+          git push origin HEAD:${{github.event.pull_request.head.ref}}

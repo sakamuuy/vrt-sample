@@ -6,7 +6,7 @@ function App() {
     <div style={{
       background: '#333',
       padding: '24px',
-      minHeight: '100vh'
+      minHeight: '100vh',
     }}>
       <div 
         style={{

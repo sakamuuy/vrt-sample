@@ -13,7 +13,7 @@ jobs:
           git config --global user.email "sakamuu.y@gmail.com" 
           git config --global user.name "sakamuuy"
           git config pull.rebase false
-          git switch master 
+          git switch main  
           git pull
           git switch ${{ github.head_ref }}
 

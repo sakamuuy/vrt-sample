@@ -7,6 +7,6 @@ export default {
   component: Button,
 }
 
-const Template: Story<Props> = (arg) => <Button {...arg}>label</Button>
+const Template: Story<Props> = (arg) => <Button {...arg}>label2</Button>
 
 export const Normal = Template.bind({})
